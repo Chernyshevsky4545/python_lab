@@ -1,95 +1,88 @@
-# Приклад 1. Статистика списку оцінок
+# Приклад 1
 grades = [10, 8, 12, 9, 11]
-print("--- Приклад 1 ---")
 print("Min:", min(grades))
 print("Max:", max(grades))
 print("Сума:", sum(grades))
 print("Середнє:", sum(grades) / len(grades))
 
-# Приклад 2. Додавання, видалення та сортування
+# Приклад 2
 numbers = [5, 2, 9, 1]
 numbers.append(7)
 numbers.remove(2)
 numbers.sort()
-print("\n--- Приклад 2 ---")
-print("Відсортований список:", numbers)
+print(numbers)
 
-# Приклад 3. Фільтрація у новий список
-numbers = [12, 3, 4, 7, 10, 5]
+# Приклад 3
+numbers = [12, -3, 4, -7, 10, 5]
 positive = []
 for number in numbers:
     if number > 0:
         positive.append(number)
-print("\n--- Приклад 3 ---")
-print("Додатні:", positive)
+print(positive)
 
-# Приклад 4. Кортеж координат і розпакування
+# Приклад 4
 point = (15, -4)
 x, y = point
-print("\n--- Приклад 4 ---")
 print("x:", x)
 print("y:", y)
 
-# Приклад 5. Видалення дублікатів через set
+# Приклад 5
 names = ["Ivan", "Anna", "Ivan", "Olha", "Anna"]
 unique_names = set(names)
-print("\n--- Приклад 5 ---")
-print("Унікальні імена:", unique_names)
+print(unique_names)
 
-# Приклад 6. Спільні елементи двох множин
+# Приклад 6
 math = {"Ivan", "Anna", "Olha"}
 python = {"Anna", "Maksym", "Ivan"}
-print("\n--- Приклад 6 ---")
 print("Спільні:", math & python)
 print("Тільки math:", math - python)
 print("Усі:", math | python)
 
-# Приклад 7. Словник товарів
+# Приклад 7
 prices = {"bread": 35, "milk": 48}
 prices["cheese"] = 120
 prices["bread"] = 38
-print("\n--- Приклад 7 ---")
-print("Словник цін:", prices)
+print(prices)
 
-# Приклад 8. Перебір items()
-print("\n--- Приклад 8 ---")
+# Приклад 8
+prices = {"bread": 38, "milk": 48, "cheese": 120}
 for product, price in prices.items():
     print(product, "-", price, "грн")
 
-# Приклад 9. Учень - список оцінок
+# Приклад 9
 students = {
     "Anna": [10, 11, 12],
     "Ivan": [8, 9, 10]
 }
-print("\n--- Приклад 9 ---")
-print("Оцінки Анни:", students["Anna"])
+print(students["Anna"])
 
-# Приклад 10. Середній бал кожного учня
-print("\n--- Приклад 10 ---")
-for name, grades_list in students.items():
-    average = sum(grades_list) / len(grades_list)
+# Приклад 10
+students = {
+    "Anna": [10, 11, 12],
+    "Ivan": [8, 9, 10]
+}
+for name, grades in students.items():
+    average = sum(grades) / len(grades)
     print(name, round(average, 2))
 
-# Приклад 11. Пошук найкращого результату
-students_scores = {
+# Приклад 11
+students = {
     "Anna": [10, 11, 12],
     "Ivan": [8, 9, 10],
     "Olha": [11, 12, 12]
 }
 best_name = ""
 best_average = 0
-for name, grades_list in students_scores.items():
-    average = sum(grades_list) / len(grades_list)
+for name, grades in students.items():
+    average = sum(grades) / len(grades)
     if average > best_average:
         best_average = average
         best_name = name
-print("\n--- Приклад 11 ---")
 print("Найкращий:", best_name, round(best_average, 2))
 
-# Приклад 12. Вибір структури даних
-grades_list = [10, 8, 12]  # list
-point_tuple = (10, 20)     # tuple
-subjects_set = {"Python", "HTML", "Python"}  # set
-student_dict = {"name": "Ivan", "grade": 11}  # dict
-print("\n--- Приклад 12 ---")
-print(grades_list, point_tuple, subjects_set, student_dict)
+# Приклад 12
+grades = [10, 8, 12]                
+point = (10, 20)                     
+subjects = {"Python", "HTML", "Python"}  
+student = {"name": "Ivan", "grade": 11}  
+print(grades, point, subjects, student)
