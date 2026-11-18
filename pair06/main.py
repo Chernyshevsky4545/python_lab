@@ -31,7 +31,7 @@ def create_report():
   full_report = "\n".join(report_lines)
 
 
-  print("--- Звіт ---")
+  print("Звіт")
   print(full_report)
 
 
