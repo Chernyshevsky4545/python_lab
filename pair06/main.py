@@ -5,7 +5,7 @@ import student_utils
 def create_report():
   value = count_entry.get().strip()
 
-  # Перевірка коректності введення (ціле число від 1 до 20)
+
   if not value.isdecimal():
     report_text.delete("1.0", tk.END)
     report_text.insert(tk.END, "Помилка: введіть ціле число від 1 до 20.")
@@ -30,16 +30,16 @@ def create_report():
 
   full_report = "\n".join(report_lines)
 
-  # Вивід у консоль (згідно з умовою)
+
   print("--- Звіт ---")
   print(full_report)
 
-  # Оновлення текстового поля у вікні Tkinter
+
   report_text.delete("1.0", tk.END)
   report_text.insert(tk.END, full_report)
 
 
-# Налаштування головного вікна
+
 window = tk.Tk()
 window.title("Статистика учнів")
 window.geometry("500x320")
